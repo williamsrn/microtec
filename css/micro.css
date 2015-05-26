@@ -1,0 +1,148 @@
+/* 
+    Created on : Apr 10, 2015, 4:40:16 PM
+    Author     : Ralph
+*/
+/** COVER  **/
+#coverCanvas{
+    border: 1px solid red;
+    margin-top: -150px;
+}
+.coverContent{
+    padding: 50px;    
+}
+span.optimize {
+    font-style: italic;
+    color: #9EFFFE;    
+}
+span.optimize:hover{
+    color: #3D75DD;
+}
+.site-wrapper-inner{
+    background: url(../img/bg11.png) no-repeat;
+    background-size: 75%;
+    background-position: 158% 25px;
+    margin-left: -20px;
+    margin-right: -20px;    
+}
+legend{
+    color: #fff;
+}
+
+
+#message{
+    height: 183px;
+}
+#msgBlk{
+    padding-left: 15px;
+}
+
+.mtcu{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+@media (max-width: 768px){
+    #msgBlk{
+        padding-left: 0px;
+        max-width: 600px;
+    }
+    #nameBlk{
+        max-width:  350px; 
+    }
+}
+
+
+/** HEADER/NAVBAR **/
+.navbar{
+    padding: 10px 15px 0px 15px; 
+    margin-bottom: 0px;
+}
+#logoContainer{
+    height: auto;
+    display: inline-block;
+    margin-top: -4px;
+}
+.logo{
+    height: auto;    
+    float: left;
+}
+.logo img{    
+    width: 225px;    
+}
+a.secret{
+    font-size: 10px;
+    display: inline-block;    
+    color: white;
+    padding-top: 35px;
+}
+.navbar-collapse.collapse {
+    //display: inline-block !important;
+    height: auto !important;
+    padding-bottom: 0px;
+    overflow: visible !important;
+    float: right;
+}
+#navBut{
+    display: inline-block;
+    float: right;
+    margin: 0px 3px 0px 10px;    
+}
+.collapsing {
+    float: right;    
+}
+.navbar-toggle {
+    margin-right: 0px;
+}
+#signInBut{
+    margin: 10px 20px 0px;
+}
+@media (max-width: 420px){
+    .logo img{
+            width: 175px;        
+    }
+    a.secret{
+        margin-top: 20px;
+        padding-top: 5px;        
+    }
+    .navbar{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .navbar .container{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #logoContainer{
+        padding-top: 5px;
+    }
+    .navbar-toggle {
+        margin-top: 5px;
+    } 
+}
+
+footer span{
+    font-size: 11px;
+}
+/** New User Form  **/
+span.notice{
+    color: red;
+    padding-left: 10px;    
+}
+
+#emailMsg button{    
+    margin-top: -12px;
+    margin-left: 10px;
+}
+
+/** VerifyEmail  **/
+.welcome{
+    margin-top: 50px;
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.checkbox{
+    text-align: left;
+    padding-left: 10px;
+}
+
