@@ -57,7 +57,7 @@
                     include 'snips/validateEmail_snp.php';
                     break;
                 case '4':
-                    include 'pscript/validateAccount.php';                    
+                    include 'validateAccount.php';                    
                     break;
                 case '5':
                     include 'snips/userAccExists_snp.php';

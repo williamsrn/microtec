@@ -33,7 +33,7 @@
                 
     </head>
     <?php 
-        echo getcwd() . "\n";
+        //echo getcwd() . "\n";//show current working directory
         $page = reqSet('p');
         $page = substr($page, 1);
         if(strlen($page) == 0)
@@ -51,11 +51,11 @@
                             <div class="masthead-brand logo"><img src="img/logo_v6.png" alt=""/>&nbsp;<a  href="javascript: screensize();" >LLC</a></div>
                             <nav id="nav">
                                 <ul class="nav masthead-nav">
-                                    <li class="<?php echo $arg[0]; ?>" data-lnk="0"><a href="index.php?c=1">Home</a></li>
+                                    <li class="<?php echo $arg[0]; ?>" data-lnk="0"><a href="index.php?p=c0">Home</a></li>
                                     
-                                    <li class="<?php echo $arg[1]; ?>" data-lnk="1"><a href="./Cover2_files/Cover2.html">Contact</a></li>
+                                    <li class="<?php echo $arg[1]; ?>" data-lnk="1"><a href="index.php?p=c1">Contact</a></li>
                                     
-                                    <li class="<?php echo $arg[2]; ?>" data-lnk="2" id="sin"><a href="signInPage.php">Sign In</a></li>
+                                    <li class="<?php echo $arg[2]; ?>" data-lnk="2" id="sin"><a href="index.php?p=c2">Sign In</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -70,7 +70,7 @@
                                 include 'php/snips/contactUs.php';
                                 break;           
                             case '2':
-                                include '../../snips/signInForm.php';
+                                include 'php/snips/signInForm.php';
                                 break;                            
                             default:
                                 include 'snips/coverMain_snp.php';

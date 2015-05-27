@@ -1,9 +1,10 @@
 <?php
-include_once 'db_connect.php';
+//echo getcwd() . "\n";
+include_once '../db/db_connect.php';
 //var_dump($_POST);
 
-$email = $conn->escape_string($_POST['inputEmail']);
-$pass = $conn->escape_string($_POST['inputPassword']);
+$email = $conn->escape_string($_POST['userEmail']);
+$pass = $conn->escape_string($_POST['userPassword']);
 
 if ( isThreat($email) || isThreat($pass)){
  // [... direct user to an error page and quit ...]
@@ -12,9 +13,9 @@ if ( isThreat($email) || isThreat($pass)){
 }
 
         
-$sql = "SELECT * FROM users WHERE email='$email'"; 
+$sql = "SELECT * FROM user WHERE email='$email'"; 
 
-echo "sql:  $sql<br>";
+//echo "sql:  $sql<br>";
 $result = $conn->query($sql);        
 //printf("Select returned %d rows.\n", $result->num_rows);
 if($result->num_rows > 0){
@@ -48,7 +49,7 @@ if($result->num_rows > 0){
          //Account not activated, check if verified
         if(0 === (int)$verified){
             //account never activated
-            echo "Account activation required. Please check email for activation email";
+            echo "Account activation required. Please check your email for and activation link";
             echo "Send a new activation email";//semd new email -- update hash and password with new email activation.  May need to store old/new hash
         }else{
             //account inactive

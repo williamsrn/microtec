@@ -50,7 +50,7 @@ $hashed = md5($concat);
 //echo "concat= $concat<br>";
 //echo "hashed= $hashed<br>";
 //check if user email exists
-$sql = "SELECT ID, email from users WHERE email='$email'";
+$sql = "SELECT ID, email from user WHERE email='$email'";
 $conn->prepare($sql);
 $result = $conn->query($sql);
 $rowCnt = $result->num_rows;
